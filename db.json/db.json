@@ -3,6 +3,7 @@
       {
         "id": 1,
         "name": "Spaghetti Carbonara",
+        "image": "images/spaghetti.carbonara.jpg",
         "ingredients": [
           "200g spaghetti",
           "100g pancetta (or bacon), diced",
@@ -25,6 +26,7 @@
       {
         "id": 2,
         "name": "Chicken Alfredo",
+        "image": "images/chicken.alfredo.jpg",
         "ingredients": [
           "2 boneless, skinless chicken breasts",
           "250g fettuccine pasta",
@@ -48,6 +50,7 @@
       {
         "id": 3,
         "name": "Tacos al Pastor",
+        "image": "images/tacos.al.pastor.jpg",
         "ingredients": [
           "500g pork shoulder, thinly sliced",
           "1 cup pineapple chunks",
@@ -70,6 +73,7 @@
       {
         "id": 4,
         "name": "Butter Chicken",
+        "image": "images/butter.chicken.jpg",
         "ingredients": [
           "500g boneless chicken, cubed",
           "2 tbsp butter",
@@ -93,6 +97,7 @@
       {
         "id": 5,
         "name": "Sushi Rolls",
+        "image": "images/sushi.rolls.jpg",
         "ingredients": [
           "2 cups sushi rice",
           "4 nori seaweed sheets",
@@ -113,6 +118,7 @@
       {
         "id": 6,
         "name": "Pancakes",
+        "image": "images/pancakes.jpg",
         "ingredients": [
           "1 cup flour",
           "1 tbsp sugar",
@@ -132,6 +138,7 @@
       {
         "id": 7,
         "name": "Greek Salad",
+        "image": "images/greek.salad.jpg",
         "ingredients": [
           "1 cucumber, diced",
           "2 tomatoes, chopped",
@@ -150,6 +157,7 @@
       {
         "id": 8,
         "name": "Grilled Cheese Sandwich",
+        "image": "images/grilled.cheese.sandwich.jpg",
         "ingredients": [
           "2 slices bread",
           "1 tbsp butter",
