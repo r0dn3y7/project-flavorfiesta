@@ -21,6 +21,29 @@
           "Season with salt and pepper, serve immediately."
         ]
     
-      }]
+      },
+      {
+        "id": 2,
+        "name": "Chicken Alfredo",
+        "ingredients": [
+          "2 boneless, skinless chicken breasts",
+          "250g fettuccine pasta",
+          "2 tbsp butter",
+          "1 cup heavy cream",
+          "1 cup grated Parmesan cheese",
+          "2 cloves garlic, minced",
+          "1 tbsp olive oil",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "Season and cook chicken, slice and set aside.",
+          "Cook fettuccine pasta until al dente.",
+          "Melt butter, sauté garlic, add heavy cream.",
+          "Stir in Parmesan, mix until smooth.",
+          "Combine pasta with sauce, top with chicken.",
+          "Serve hot with extra Parmesan."
+        ]
+      }
+    ]
     }
     
