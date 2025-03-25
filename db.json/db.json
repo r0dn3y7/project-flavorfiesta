@@ -1,0 +1,26 @@
+{
+    "recipes": [
+      {
+        "id": 1,
+        "name": "Spaghetti Carbonara",
+        "ingredients": [
+          "200g spaghetti",
+          "100g pancetta (or bacon), diced",
+          "2 large eggs",
+          "½ cup grated Parmesan cheese",
+          "1 clove garlic, minced",
+          "1 tbsp olive oil",
+          "Salt and black pepper to taste"
+        ],
+        "instructions": [
+          "Cook spaghetti until al dente. Reserve some pasta water.",
+          "Whisk eggs and Parmesan together. Set aside.",
+          "Sauté pancetta in olive oil, add garlic.",
+          "Toss drained pasta with pancetta, remove from heat.",
+          "Stir in egg mixture, adding pasta water if needed.",
+          "Season with salt and pepper, serve immediately."
+        ]
+    
+      }]
+    }
+    
