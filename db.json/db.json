@@ -43,6 +43,51 @@
           "Combine pasta with sauce, top with chicken.",
           "Serve hot with extra Parmesan."
         ]
+      },
+
+      {
+        "id": 3,
+        "name": "Tacos al Pastor",
+        "ingredients": [
+          "500g pork shoulder, thinly sliced",
+          "1 cup pineapple chunks",
+          "2 tbsp chili powder",
+          "1 tsp cumin",
+          "1 tsp garlic powder",
+          "½ tsp oregano",
+          "Juice of 1 lime",
+          "Small corn tortillas",
+          "½ cup chopped onions and cilantro for garnish"
+        ],
+        "instructions": [
+          "Marinate pork with spices and lime juice.",
+          "Cook pork slices until slightly charred.",
+          "Grill pineapple alongside pork.",
+          "Warm tortillas, assemble tacos with pork and pineapple.",
+          "Top with onions and cilantro, serve with lime."
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Butter Chicken",
+        "ingredients": [
+          "500g boneless chicken, cubed",
+          "2 tbsp butter",
+          "1 cup tomato purée",
+          "½ cup heavy cream",
+          "1 tbsp garam masala",
+          "1 tsp turmeric",
+          "1 tsp cumin",
+          "2 cloves garlic, minced",
+          "Salt and pepper to taste"
+        ],
+        "instructions": [
+          "Marinate chicken with spices for 30 minutes.",
+          "Cook chicken in butter until browned.",
+          "Add garlic, tomato purée, and simmer.",
+          "Pour in heavy cream, stir well.",
+          "Simmer for 10 minutes, serve with rice or naan."
+        ]
       }
     ]
     }
