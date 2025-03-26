@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Fetch and display recipes
     fetch(baseURL)
         .then(response => response.json())
-        .then(data => displayRecipes(data.recipes))
+        .then(data => displayRecipes(data))
         .catch(error => console.error("Error fetching recipes:", error));
 
     function displayRecipes(recipes) {
@@ -29,13 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (event.target.classList.contains("view-recipe")) {
             const recipeId = event.target.getAttribute("data-id");
 
-            fetch(baseURL)
-                .then(response => response.json())
-                .then(data => {
-                    const selectedRecipe = data.recipes.find(r => r.id == recipeId);
-                    showRecipeDetails(selectedRecipe);
-                })
-                .catch(error => console.error("Error fetching recipe:", error));
+            fetch(`${baseURL}/${recipeId}`)  
+            .then(response => response.json())
+            .then(recipe => showRecipeDetails(recipe))
+            .catch(error => console.error("Error fetching recipe details:", error));
+        
         }
     });
 
