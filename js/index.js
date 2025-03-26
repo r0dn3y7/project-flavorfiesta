@@ -32,4 +32,5 @@ document.addEventListener("DOMContentLoaded", () => {
             recipeContainer.appendChild(recipeCard);
         });
     })
+    .catch(error => console.error("Error fetching recipes:", error));
 });
