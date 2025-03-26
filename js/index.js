@@ -33,4 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     })
     .catch(error => console.error("Error fetching recipes:", error));
+
+     // Function to open the modal
+     function openModal(recipe) {
+        modalTitle.textContent = recipe.name; // Set the recipe name
+        modalImage.src = recipe.image; // Set the recipe image
+        modalIngredients.innerHTML = recipe.ingredients.map(ing => `<li>${ing}</li>`).join(""); // List ingredients
+        modalInstructions.textContent = recipe.instructions; // Set the instructions
+        modal.style.display = "block"; // Show the modal
 });
