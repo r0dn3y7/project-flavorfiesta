@@ -1,12 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetchRecipes();
-    const baseUrl = "http://localhost:3000/recipes";
-  });
+    const recipeContainer = document.getElementById("recipe-container");
+    const modal = document.getElementById("recipe-modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalImage = document.getElementById("modal-image");
+    const modalIngredients = document.getElementById("modal-ingredients");
+    const modalInstructions = document.getElementById("modal-instructions");
+    const closeButton = document.querySelector(".close-btn");
 
-  function fetchRecipes() {
-    fetch("http://localhost:3000/recipes") 
-      .then(response => response.json())
-      .then(data => displayRecipes(data))
-      .catch(error => console.error("Error fetching recipes:", error));
-  }
-
+});
