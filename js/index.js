@@ -1,50 +1,60 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const baseURL = "http://localhost:3000/recipes"; 
+    const recipesContainer = document.getElementById("recipes-container");
+    const recipeModal = document.getElementById("recipe-modal");
+    const modalContent = document.getElementById("modal-content");
 
-    const BaseUrl = "http://localhost:3000/recipes";
+    // Fetch and display recipes
+    fetch(baseURL)
+        .then(response => response.json())
+        .then(data => displayRecipes(data.recipes))
+        .catch(error => console.error("Error fetching recipes:", error));
 
-
-    const recipeContainer = document.getElementById("recipe-container");
-    const modal = document.getElementById("recipe-modal");
-    const modalTitle = document.getElementById("modal-title");
-    const modalImage = document.getElementById("modal-image");
-    const modalIngredients = document.getElementById("modal-ingredients");
-    const modalInstructions = document.getElementById("modal-instructions");
-    const closeButton = document.querySelector(".close-btn");
-
-
-    // Fetch recipes from db.json
-    fetch(BaseUrl)
-    then(response => response.json())
-    .then(recipes => {
+    function displayRecipes(recipes) {
+        recipesContainer.innerHTML = "";
         recipes.forEach(recipe => {
             const recipeCard = document.createElement("div");
             recipeCard.classList.add("recipe-card");
             recipeCard.innerHTML = `
-                <img src="${recipe.image}" alt="${recipe.name}" class="recipe-img">
+                <img src="${recipe.image}" alt="${recipe.name}">
                 <h3>${recipe.name}</h3>
+                <button class="view-recipe" data-id="${recipe.id}">View Recipe</button>
             `;
-
-        // Open modal when recipe is clicked
-         recipeCard.addEventListener("click", () => {
-            openModal(recipe);
-            });
-            // Append the recipe card to the container
-            recipeContainer.appendChild(recipeCard);
+            recipesContainer.appendChild(recipeCard);
         });
-    })
-    .catch(error => console.error("Error fetching recipes:", error));
+    }
 
-     // Function to open the modal
-     function openModal(recipe) {
-        modalTitle.textContent = recipe.name; // Set the recipe name
-        modalImage.src = recipe.image; // Set the recipe image
-        modalIngredients.innerHTML = recipe.ingredients.map(ing => `<li>${ing}</li>`).join(""); // List ingredients
-        modalInstructions.textContent = recipe.instructions; // Set the instructions
-        modal.style.display = "block"; // Show the modal
-     }
+    // View Recipe button
+    recipesContainer.addEventListener("click", event => {
+        if (event.target.classList.contains("view-recipe")) {
+            const recipeId = event.target.getAttribute("data-id");
 
-      // Event listener to close modal when close button is clicked
-    closeButton.addEventListener("click", () => {
-        modal.style.display = "none";
+            fetch(baseURL)
+                .then(response => response.json())
+                .then(data => {
+                    const selectedRecipe = data.recipes.find(r => r.id == recipeId);
+                    showRecipeDetails(selectedRecipe);
+                })
+                .catch(error => console.error("Error fetching recipe:", error));
+        }
+    });
+
+    function showRecipeDetails(recipe) {
+        modalContent.innerHTML = `
+            <h2>${recipe.name}</h2>
+            <img src="${recipe.image}" alt="${recipe.name}" style="width:100%; border-radius:10px;">
+            <h3>Ingredients:</h3>
+            <ul>${recipe.ingredients.map(ing => `<li>${ing}</li>`).join("")}</ul>
+            <h3>Instructions:</h3>
+            <p>${recipe.instructions}</p>
+        `;
+        recipeModal.style.display = "flex";
+    }
+    
+
+    window.addEventListener("click", event => {
+        if (event.target === recipeModal) {
+            recipeModal.style.display = "none";
+        }
     });
 });
