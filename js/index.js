@@ -14,16 +14,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fetch recipes from db.json
     fetch(BaseUrl)
-        .then(response => response.json())
-        .then(recipes => {
-            recipes.forEach(recipe => {
-                const recipeCard = document.createElement("div");
-                recipeCard.classList.add("recipe-card");
-                recipeCard.innerHTML = `
-                    <img src="${recipe.image}" alt="${recipe.name}" class="recipe-img">
-                    <h3>${recipe.name}</h3>
-            
+    then(response => response.json())
+    .then(recipes => {
+        recipes.forEach(recipe => {
+            const recipeCard = document.createElement("div");
+            recipeCard.classList.add("recipe-card");
+            recipeCard.innerHTML = `
+                <img src="${recipe.image}" alt="${recipe.name}" class="recipe-img">
+                <h3>${recipe.name}</h3>
+            `;
 
-                `
+        // Open modal when recipe is clicked
+         recipeCard.addEventListener("click", () => {
+            openModal(recipe);
+            });
+            // Append the recipe card to the container
+            recipeContainer.appendChild(recipeCard);
+        });
+    })
 });
-        
