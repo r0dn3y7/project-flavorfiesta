@@ -41,4 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
         modalIngredients.innerHTML = recipe.ingredients.map(ing => `<li>${ing}</li>`).join(""); // List ingredients
         modalInstructions.textContent = recipe.instructions; // Set the instructions
         modal.style.display = "block"; // Show the modal
+     }
+
+      // Event listener to close modal when close button is clicked
+    closeButton.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
 });
