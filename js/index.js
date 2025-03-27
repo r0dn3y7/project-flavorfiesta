@@ -49,6 +49,10 @@ document.addEventListener("DOMContentLoaded", () => {
         recipeModal.style.display = "flex";
     }
     
-
-   
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") {
+            recipeModal.style.display = "none";
+        }
+    });
+    
 });
