@@ -50,9 +50,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
 
-    window.addEventListener("click", event => {
-        if (event.target === recipeModal) {
-            recipeModal.style.display = "none";
-        }
-    });
+   
 });
